@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Game8 Cleaner",
+    "version": "1.0",
+    "description": "Cleans up Game8 webpage",
+    "permissions": ["storage"],
+    "host_permissions": ["*://game8.co/*"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://game8.co/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  }
